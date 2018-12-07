@@ -41,7 +41,7 @@ func Schedule(spec string, job cron.Job) error {
 		}
 		spec = confSpec
 	}
-	sched, err := cron.Parse(spec)
+	sched := cron.Parse(spec)
 	if err != nil {
 		return err
 	}
